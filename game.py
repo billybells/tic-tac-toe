@@ -52,6 +52,13 @@ def make_random_ai_move():
     board[move - 1] = 'O'
     print(f'O picks {move}.')
 
+def make_next_available_move():
+  valid_moves = get_valid_moves()
+  if len(valid_moves) > 0:
+    move = valid_moves[0]
+    board[move - 1] = 'O'
+    print(f'O picks {move}.')
+
 def make_smart_ai_move():
   valid_moves = get_valid_moves()
   # if any move will win, let's take it
@@ -104,8 +111,9 @@ while (True):
       print("X wins!  Let's go again.")
       reset_board()
     else:
-      make_random_ai_move()
+      # make_random_ai_move()
       # make_smart_ai_move()
+      make_next_available_move()
       if is_winner('O', board):
         print_board()
         print("Oh no!  O won.  Let's go again.")
