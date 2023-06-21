@@ -104,8 +104,8 @@ while (True):
       print("X wins!  Let's go again.")
       reset_board()
     else:
-      # make_random_ai_move()
-      make_smart_ai_move()
+      make_random_ai_move()
+      # make_smart_ai_move()
       if is_winner('O', board):
         print_board()
         print("Oh no!  O won.  Let's go again.")
